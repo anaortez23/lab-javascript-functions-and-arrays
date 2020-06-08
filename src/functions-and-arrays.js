@@ -66,8 +66,25 @@ const wordsUnique = [
   'bring'
 ];
 
+let newWordsUnique = wordsUnique.concat();
+function uniquifyArray(words)
+{
+  return words.filter((value, index) => words.indexOf(value) === index);
+}
+console.log(uniquifyArray(newWordsUnique));
+
 // Iteration #6: Find elements
-const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+const words = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+function doesWordExist(arr, word){
+  if (arr.includes(word) === true){
+    return true;
+  }
+  else return false;
+}
+
+const answer = doesWordExist(words, "machine");
+console.log(answer);
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -83,6 +100,14 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes(arr, word){
+  var count = 0;
+  arr.forEach((element) => (element === word && count++));
+  return count;
+}
+console.log(howManyTimes(words,"matter"));
+
 
 // Iteration #8: Bonus
 
